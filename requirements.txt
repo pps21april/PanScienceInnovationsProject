@@ -1,0 +1,10 @@
+langchain
+langchain_openai 
+langchain_community
+langchain_experimental
+sqlite3
+json
+PyPDF2
+fastapi 
+pydantic
+uvicorn
