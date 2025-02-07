@@ -24,7 +24,11 @@ Tools I used :
 9 - Local Server Creation - uvicorn
 
 
+
 Assumption - Files must be PDF files
+
+
+
 
 Here is the step by step way how I made this project - 
 
