@@ -65,6 +65,45 @@ Example -
 ![image](https://github.com/user-attachments/assets/3900d522-aa46-4bb5-8f65-c54b991461ac)
 
 
+Backend API integration:
+
+1 - I have created three API endpoints for our backend - http://127.0.0.1:9999/uploaddocuments , http://127.0.0.1:9999/queryingsystem, http://127.0.0.1:9999/viewingmetadata
+
+2 - http://127.0.0.1:9999/uploaddocuments endpoint uploads our files and creates a list of documents with the source of each document
+
+3 - http://127.0.0.1:9999/queryingsystem endpoint answers the queries of the users
+
+4 - http://127.0.0.1:9999/viewingmetadata helps in creating a table in the database containing documents and their metadata everytime we upload new files. It also helps in 
+    querying from the database to view our metadata 
+
+
+API calls outside the project:
+
+1 - We only used OpenAI for our LLMs, Chunking and embedding models.
+
+2 - We have to provide our own api key in the form of OPENAI_API_KEY to access and use these models everytime we make API calls to OpenAI
+
+3 - We made use of Langchain in order to make these API calls and creating our vector database using chromadb
+
+
+
+Testing Instructions:
+
+1 - I have provided two files for unit and integaration testing
+
+2 - I these files I have also provided the modules which we have to install for our program.
+
+3 - First we have to insert documents folder in the system containing all our PDF files
+
+4 - In the upload_documents function provide the path to this folder to create list of documents containing the name of the file to which it belongs
+
+5 - In the store_embeddings_create_retriever function provide the document folder path to create embeddings of our documents, store it in chromadb vector store and create a 
+    retriever to search for relevant documents
+
+6 - In answering_user_queries function provide the document folder path and user query to answer questions based on relevant documents extracted by the retriever using the 
+    user query 
+    
+
 
 
 
